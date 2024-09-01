@@ -5,36 +5,22 @@ import { usePathname, useRouter } from "next/navigation";
 import { CiMenuFries } from "react-icons/ci";
 
 const links = [
-  {
-    name: "home",
-    path: "/",
-  },
-  {
-    name: "services",
-    path: "/services",
-  },
-  {
-    name: "resume",
-    path: "/resume",
-  },
-  {
-    name: "work",
-    path: "/work",
-  },
-  {
-    name: "contact",
-    path: "/contact",
-  },
+  { name: "home", path: "/" },
+  { name: "services", path: "/services" },
+  { name: "resume", path: "/resume" },
+  { name: "work", path: "/work" },
+  { name: "contact", path: "/contact" },
 ];
 
 const MobileNav = () => {
   const router = useRouter();
-
-  if (!router) {
-    return null; // Handle the case where router is not available
-  }
   const pathname = usePathname();
   const { push } = router;
+
+  // Ensure that `router` and `pathname` are always available
+  if (!router) {
+    return null;
+  }
 
   const handleNavigation = (path) => {
     push(path);
