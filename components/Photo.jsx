@@ -18,32 +18,31 @@ const Photo = () => {
           initial={{ opacity: 0 }}
           animate={{
             opacity: 1,
-            transition: { delay: 2.4, duration: 1, ease: "easeInOut" },
+            transition: { delay: 2, duration: 1, ease: "easeInOut" },
           }}
-          className="w-[298px] h-[298px] xl:w-[498px] xl:h-[498px] mix-blend-lighten absolute"
+          className="w-[298px] h-[298px] xl:w-[450px] xl:h-[450px] mix-blend-lighten absolute"
         >
           <Image
             src="/assets/photo.png"
             priority
-            quality={100}
             fill
             alt="Kundan Kumar Photo"
-            className="object-contain "
+            className=" bg-accent rounded-full"
           />
         </motion.div>
 
         {/* circle */}
         <motion.svg
-          className="w-[300px] xl:w-[506px] h-[300px] xl:h-[506px]"
+          className="w-[300px] h-[300px] xl:w-[452px] xl:h-[452px] mv-5"
           fill="transparent"
           viewBox="0 0 506 506"
           xmlns="http://www.w3.org/2000/svg"
         >
           <motion.circle
             cx="253"
-            cy="253"
-            r="250"
-            stroke="#F5CE48"
+            cy="250"
+            r="260"
+            stroke="white"
             strokeWidth="4"
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -53,7 +52,7 @@ const Photo = () => {
               rotate: [120, 360],
             }}
             transition={{
-              duration: 20,
+              duration: 10,
               repeat: Infinity,
               repeatType: "reverse",
             }}

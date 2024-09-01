@@ -28,7 +28,7 @@ const projects = [
   },
   {
     num: "02",
-    category: "Frontend Developer",
+    category: "Frontend",
     title: "project 2",
     description:
       "Astra Health uses AI to simplify administrative tasks, reduce burnout, and boost efficiency in healthcare, allowing providers to focus more on patient care. We're committed to making healthcare more accessible and patient-centered.",
@@ -62,7 +62,7 @@ const Work = () => {
       initial={{ opacity: 0 }}
       animate={{
         opacity: 1,
-        transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
+        transition: { delay: 2, duration: 0.4, ease: "easeIn" },
       }}
       className="min-h-[80vh] flex flex-col justify-center py-12 xl:px-0"
     >
@@ -122,10 +122,15 @@ const Work = () => {
               {projects.map((project, index) => {
                 return (
                   <SwiperSlide key={index} className="w-full">
-                    <div className="h-[460px] relative group flex justify-center items-center bg-pink-50/20">
+                    <div className="h-[460px] relative group flex justify-center items-center bg-pink-50/20 rounded-lg">
                       <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10"></div>
-                      <div className="relative w-full h-full">
-                        <Image src={project.image} fill alt="" />
+                      <div className="relative w-full h-full ">
+                        <Image
+                          src={project.image}
+                          fill
+                          alt=""
+                          className="rounded-lg"
+                        />
                       </div>
                     </div>
                   </SwiperSlide>

@@ -90,7 +90,7 @@ const Contact = () => {
       initial={{ opacity: 0 }}
       animate={{
         opacity: 1,
-        transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
+        transition: { delay: 2, duration: 0.4, ease: "easeIn" },
       }}
       className="py-6"
     >
@@ -103,11 +103,6 @@ const Contact = () => {
               className="flex flex-col gap-6 p-10 bg-[#232329] rounded-xl"
             >
               <h3 className="text-4xl text-white">Let's work together</h3>
-              <p className="text-white/80">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum
-                nihil sapiente pariatur id totam.
-              </p>
-              {/* input */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <Input
@@ -174,9 +169,14 @@ const Contact = () => {
                   <SelectContent>
                     <SelectGroup>
                       <SelectLabel>Select a service</SelectLabel>
-                      <SelectItem value="est">Web Development</SelectItem>
-                      <SelectItem value="cst">UI/UX Design</SelectItem>
-                      <SelectItem value="mst">Logo Design</SelectItem>
+                      <SelectItem value="mobile">Mobile Development</SelectItem>
+                      <SelectItem value="web">Web Development</SelectItem>
+                      <SelectItem value="backend">
+                        Backend Development
+                      </SelectItem>
+                      <SelectItem value="full-stack">
+                        Full-Stack Development
+                      </SelectItem>
                     </SelectGroup>
                   </SelectContent>
                 </Select>

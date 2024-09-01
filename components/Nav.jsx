@@ -29,11 +29,13 @@ const links = [
 
 const Nav = () => {
   const router = useRouter();
-  const { pathname, push } = router;
+  const { push } = router;
+  const pathname = usePathname();
 
   const handleNavigation = (path) => {
     push(path);
   };
+  console.log("pathname", pathname);
 
   return (
     <nav className="flex gap-8">
@@ -44,7 +46,7 @@ const Nav = () => {
             key={index}
             className={`${
               link.path === pathname && "text-accent border-b-2 border-accent"
-            } capitalize font-medium hover:text-accent transition-all`}
+            } capitalize font-medium hover:text-accent transition-all cursor-pointer`}
           >
             {link.name}
           </span>

@@ -1,7 +1,7 @@
 "use client";
 
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { CiMenuFries } from "react-icons/ci";
 
 const links = [
@@ -33,8 +33,8 @@ const MobileNav = () => {
   if (!router) {
     return null; // Handle the case where router is not available
   }
-
-  const { pathname, push } = router;
+  const pathname = usePathname();
+  const { push } = router;
 
   const handleNavigation = (path) => {
     push(path);
@@ -64,7 +64,7 @@ const MobileNav = () => {
               className={`${
                 link.path === pathname
                   ? "text-accent border-b-2 border-accent"
-                  : "text-xl capitalize hover:text-accent transition-all"
+                  : "text-xl capitalize hover:text-accent transition-all cursor-pointer"
               } cursor-pointer`}
             >
               {link.name}
