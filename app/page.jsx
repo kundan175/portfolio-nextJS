@@ -1,6 +1,3 @@
-import { Button } from "@/components/ui/button";
-import { FiDownload } from "react-icons/fi";
-
 // components
 import Social from "@/components/Social";
 import Photo from "@/components/Photo";
@@ -21,18 +18,7 @@ const Home = () => {
               Full-Stack Developer | React Native, React.js, Node.js, and
               Next.js Enthusiast
             </p>
-            {/* btn and socials */}
             <div className="flex flex-col xl:flex-row items-center gap-8">
-              {/* <a download="Kundan_Herath_CV">
-                <Button
-                  variant="outline"
-                  size="lg"
-                  className="uppercase flex items-center gap-2"
-                >
-                  <span>Download CV</span>
-                  <FiDownload className="text-xl" />
-                </Button>
-              </a> */}
               <div className="mb-8 xl:mb-0">
                 <Social
                   containerStyles="flex gap-6"
@@ -41,7 +27,6 @@ const Home = () => {
               </div>
             </div>
           </div>
-          {/* photo */}
           <div className="order-1 xl:order-none mb-8 xl:mb-0">
             <Photo />
           </div>
