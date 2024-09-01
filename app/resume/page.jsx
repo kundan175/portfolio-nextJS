@@ -1,5 +1,4 @@
 "use client";
-
 import {
   FaHtml5,
   FaCss3,
@@ -8,15 +7,9 @@ import {
   FaFigma,
   FaNodeJs,
 } from "react-icons/fa";
-
 import { SiCanva, SiSpringboot } from "react-icons/si";
-import { GiPublicSpeaker } from "react-icons/gi";
-import { TbMathSymbols } from "react-icons/tb";
-import { RiTeamLine } from "react-icons/ri";
-
 import { SiTailwindcss, SiNextdotjs } from "react-icons/si";
 
-// about data
 const about = {
   title: "About me",
   description:
@@ -71,29 +64,21 @@ const experience = {
   ],
 };
 
-// education data
 const education = {
   icon: "/assets/resume/cap.svg",
   title: "My education",
   description:
-    "Currently I'm reading for my bsc in Software Engineering at University of Moratuwa Faculty of IT.",
+    "Currently focusing on AI and machine learning as part of my studies in Software Engineering.",
   items: [
     {
-      institution: "University of Moratuwa - SL",
-      degree: "Bsc in Information Technology",
-      duration: "2021 - 2025",
+      institution: "Lovely Professional University",
+      degree: "Bachelor's degree",
+      duration: "2021 - 2024",
     },
     {
-      institution: "Central College Kuliyapitiya",
-      degree: "Secondary Education",
-      duration: "2011 - 2019",
-    },
-    {
-      institution: "Pannala National School",
-      degree: "Primary Education",
-      duration: "2006 - 2011",
-      description:
-        "Passed the grade-5 scholarship examination and went to another school.",
+      institution: "Catholic High school - Ara",
+      degree: "Senior Secondary Education, Science (PCM)",
+      duration: "2019 - 2021",
     },
   ],
 };
@@ -101,9 +86,12 @@ const education = {
 // skills data
 const skills = {
   title: "My skills",
-  description:
-    "Mainly my technical skills and interpersonal skills have been listed below.",
+  description: "These are the technologies in which I specialize in exporting.",
   skillList: [
+    {
+      icon: <FaReact />,
+      name: "React Native",
+    },
     {
       icon: <FaReact />,
       name: "react.js",
@@ -113,20 +101,12 @@ const skills = {
       name: "next.js",
     },
     {
-      icon: <SiSpringboot />,
-      name: "spring boot",
-    },
-    {
-      icon: <SiTailwindcss />,
-      name: "tailwind.css",
-    },
-    {
       icon: <FaNodeJs />,
       name: "node.js",
     },
     {
-      icon: <FaFigma />,
-      name: "figma",
+      icon: <SiTailwindcss />,
+      name: "tailwind.css",
     },
 
     {
@@ -140,10 +120,6 @@ const skills = {
     {
       icon: <FaJs />,
       name: "javascript",
-    },
-    {
-      icon: <SiCanva />,
-      name: "canva",
     },
   ],
 };
@@ -236,7 +212,6 @@ const Resume = () => {
                             {item.degree}
                           </h3>
                           <div className="flex items-center gap-3">
-                            {/* dot */}
                             <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
                             <p className="text-white/60">{item.institution}</p>
                           </div>

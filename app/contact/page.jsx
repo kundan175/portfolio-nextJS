@@ -100,10 +100,10 @@ const Contact = () => {
           <div className="xl:w-[54%] order-2 xl:order-none">
             <form
               onSubmit={handleSubmit}
-              className="flex flex-col gap-6 p-10 bg-purple-300 rounded-xl"
+              className="flex flex-col gap-6 p-10 bg-[#232329] rounded-xl"
             >
-              <h3 className="text-4xl text-[#3B134E]">Let's work together</h3>
-              <p className="text-[#3B134E]/80">
+              <h3 className="text-4xl text-white">Let's work together</h3>
+              <p className="text-white/80">
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum
                 nihil sapiente pariatur id totam.
               </p>
@@ -201,7 +201,7 @@ const Contact = () => {
               <Button
                 type="submit"
                 size="md"
-                className="max-w-40 bg-[#3B134E] text-accent"
+                className="max-w-40 bg-accent  text-[#3B134E]"
               >
                 Send message
               </Button>

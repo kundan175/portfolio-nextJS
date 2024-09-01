@@ -1,18 +1,17 @@
 import Link from "next/link";
 
-import { FaGithub, FaLinkedinIn, FaYoutube, FaTwitter } from "react-icons/fa";
+import { FaGithub, FaLinkedinIn, FaStackOverflow } from "react-icons/fa";
 
 const socials = [
-  { icon: <FaGithub />, path: "https://github.com/KundanHerath" },
+  { icon: <FaGithub />, path: "https://github.com/kundan175" },
   {
     icon: <FaLinkedinIn />,
-    path: "https://www.linkedin.com/in/Kundan-herath-b82399215/",
+    path: "https://www.linkedin.com/in/kundan-singh99",
   },
   {
-    icon: <FaYoutube />,
-    path: "https://www.youtube.com/channel/UCpGrjJuDRmQjnoVfRIp1ovw",
+    icon: <FaStackOverflow />,
+    path: "https://stackoverflow.com/users/26775806/kundan-kumar",
   },
-  { icon: <FaTwitter />, path: "https://x.com/Kundan_Herath" },
 ];
 
 const Social = ({ containerStyles, iconStyles }) => {

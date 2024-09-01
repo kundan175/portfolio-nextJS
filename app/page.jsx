@@ -18,12 +18,12 @@ const Home = () => {
               Hello I'm <br /> <span className="text-accent">Kundan Kumar</span>
             </h1>
             <p className="max-w-[500px] mb-9 text-white/80">
-              I excited at developing Web and Mobile solutions which will add
-              value for my clients...
+              Full-Stack Developer | React Native, React.js, Node.js, and
+              Next.js Enthusiast
             </p>
             {/* btn and socials */}
             <div className="flex flex-col xl:flex-row items-center gap-8">
-              <a download="Kundan_Herath_CV">
+              {/* <a download="Kundan_Herath_CV">
                 <Button
                   variant="outline"
                   size="lg"
@@ -32,7 +32,7 @@ const Home = () => {
                   <span>Download CV</span>
                   <FiDownload className="text-xl" />
                 </Button>
-              </a>
+              </a> */}
               <div className="mb-8 xl:mb-0">
                 <Social
                   containerStyles="flex gap-6"

@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useRouter } from "next/navigation";
 
 const links = [
   {
@@ -27,20 +28,26 @@ const links = [
 ];
 
 const Nav = () => {
-  const pathname = usePathname();
+  const router = useRouter();
+  const { pathname, push } = router;
+
+  const handleNavigation = (path) => {
+    push(path);
+  };
+
   return (
     <nav className="flex gap-8">
       {links.map((link, index) => {
         return (
-          <Link
-            href={link.path}
+          <span
+            onClick={() => handleNavigation(link.path)}
             key={index}
             className={`${
               link.path === pathname && "text-accent border-b-2 border-accent"
             } capitalize font-medium hover:text-accent transition-all`}
           >
             {link.name}
-          </Link>
+          </span>
         );
       })}
     </nav>

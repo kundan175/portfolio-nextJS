@@ -1,67 +1,59 @@
 "use client";
-
-import { motion } from "framer-motion";
 import React, { useState } from "react";
-
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-
-import { BsArrowUpRight, BsGithub } from "react-icons/bs";
-
+import { BsArrowUpRight } from "react-icons/bs";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-
 import Link from "next/link";
 import Image from "next/image";
 import WorkSliderBtns from "@/components/WorkSliderBtns";
+import { motion } from "framer-motion";
 
 const projects = [
   {
     num: "01",
-    category: "frontend",
+    category: "Mobile App",
     title: "project 1",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate magnam modi.",
-    stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "Javascript" }],
+      "Take your New York City nightlife to the next level with N8tive Nightlife. Our app connects you with local experts who plan the perfect night out for you. Get easy access to the best clubs and venues, along with personalized concierge services and VIP perks. Skip the lines, enjoy top-notch bottle service, and discover exclusive events—all with just a few taps.",
+    stack: [{ name: "React Native" }, { name: "Javascript" }],
     image: "/assets/work/thumb1.png",
-    live: "",
+    live: "https://www.n8tivenightlife.com/",
     github: "",
   },
   {
     num: "02",
-    category: "fullstack",
+    category: "Frontend Developer",
     title: "project 2",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate magnam modi.",
-    stack: [{ name: "Next.js" }, { name: "Tailwind.css" }, { name: "Node.js" }],
+      "Astra Health uses AI to simplify administrative tasks, reduce burnout, and boost efficiency in healthcare, allowing providers to focus more on patient care. We're committed to making healthcare more accessible and patient-centered.",
+    stack: [{ name: "React.js" }, { name: "AI" }, { name: "Javascript" }],
     image: "/assets/work/thumb2.png",
-    live: "",
+    live: "https://www.astrahealth.ai/",
     github: "",
   },
   {
     num: "03",
-    category: "frontend",
+    category: "Full-Stack",
     title: "project 3",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate magnam modi.",
-    stack: [{ name: "Next.js" }, { name: "Tailwind.css" }],
+      "GharWala is a user-friendly platform for free property listings and affordable furniture and appliance rentals, making it easy to find real estate and furnish your home without ownership.",
+    stack: [{ name: "React.js" }, { name: "Node.js" }, { name: "Javascript" }],
     image: "/assets/work/thumb3.png",
-    live: "",
+    live: "https://www.gharwalah.com/",
     github: "",
   },
 ];
 
 const Work = () => {
   const [project, setProject] = useState(projects[0]);
-
   const handleSlideChange = (swiper) => {
-    // get current slide index
     const currentIndex = swiper.activeIndex;
-    // update project state based on current slide index
     setProject(projects[currentIndex]);
   };
 
@@ -117,19 +109,6 @@ const Work = () => {
                     </Tooltip>
                   </TooltipProvider>
                 </Link>
-                {/* github project button */}
-                <Link href={project.github}>
-                  <TooltipProvider delayDuration={100}>
-                    <Tooltip>
-                      <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
-                        <BsGithub className="text-white text-3xl group-hover:text-accent" />
-                      </TooltipTrigger>
-                      <TooltipContent>
-                        <p>Github repository</p>
-                      </TooltipContent>
-                    </Tooltip>
-                  </TooltipProvider>
-                </Link>
               </div>
             </div>
           </div>
@@ -144,16 +123,9 @@ const Work = () => {
                 return (
                   <SwiperSlide key={index} className="w-full">
                     <div className="h-[460px] relative group flex justify-center items-center bg-pink-50/20">
-                      {/* overlay */}
                       <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10"></div>
-                      {/* image */}
                       <div className="relative w-full h-full">
-                        <Image
-                          src={project.image}
-                          fill
-                          className="object-cover"
-                          alt=""
-                        />
+                        <Image src={project.image} fill alt="" />
                       </div>
                     </div>
                   </SwiperSlide>
